@@ -7,10 +7,15 @@ class App extends React.Component {
     super(props);
     this.state = {places: [], view: 1};
     this.nextView = this.nextView.bind(this);
-    this.prevView =this.prevView.bind(this);
+    this.prevView = this.prevView.bind(this);
+    this.getData = this.getData.bind(this);
   }
 
   componentDidMount() {
+    this.getData();
+  }
+
+  getData() {
     $.ajax({
       method: 'GET',
       url: '/api/carousel',
@@ -52,7 +57,7 @@ class App extends React.Component {
     return (
       <div>
         <h2>More Places to Stay</h2>
-        <span className='pageTracker'>{this.state.view} / 3 <button onClick={this.prevView}>&lt;</button> <button onClick={this.nextView}>&gt;</button></span>
+        <span className='pageTracker'>{this.state.view} / 3 <button onClick={this.prevView}>&lt;</button> <button id='next' onClick={this.nextView}>&gt;</button></span>
         {this.state.places.length === 0 &&
           <div></div>
         }

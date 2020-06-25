@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "start": "nodemon server/index.js",
     "react-dev": "webpack -d --watch",
     "seed": "node ./database/seed.js"
@@ -21,6 +21,7 @@
   "homepage": "https://github.com/adamsimon1/photo-carousel#readme",
   "dependencies": {
     "@babel/cli": "^7.10.3",
+    "@babel/polyfill": "^7.10.1",
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
     "faker": "^4.1.0",
@@ -31,6 +32,7 @@
     "npm": "^6.14.5",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "sinon": "^9.0.2",
     "webpack": "^4.43.0"
   },
   "devDependencies": {
@@ -39,7 +41,15 @@
     "@babel/preset-react": "^7.10.1",
     "babel-loader": "^8.1.0",
     "css-loader": "^3.6.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "jest": "^26.1.0",
     "style-loader": "^1.2.1",
     "webpack-cli": "^3.3.12"
+  },
+  "jest": {
+    "setupFiles": [
+      "./enzyme.config.js"
+    ]
   }
 }
