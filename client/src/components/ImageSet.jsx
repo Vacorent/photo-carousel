@@ -4,9 +4,6 @@ import RenderView from './RenderView.jsx'
 class ImageSet extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      view: 3
-    }
   }
 
   render() {
