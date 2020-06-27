@@ -16,6 +16,7 @@ p {
 
 img {
   width: 100%;
+  height: 150px;
   display: block;
   margin: 0 auto;
   border-radius: 3px;
@@ -29,3 +30,24 @@ button {
   border-radius: 50%;
 }
 
+.favFalse {
+  position: relative;
+  color: white;
+  width: 100px;
+  height: 90px;
+  top: -140px;
+  left: 50px;
+}
+
+.favTrue {
+  position: relative;
+  color: red;
+  width: 100px;
+  height: 90px;
+  top: -140px;
+  left: 50px;
+}
+
+.favFalse:hover {
+  border: 2px solid red;
+}
