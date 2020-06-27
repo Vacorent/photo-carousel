@@ -1,6 +1,7 @@
 import React from 'react';
 import $ from 'jquery';
 import ImageSet from './ImageSet.jsx';
+import styles from './../styles.css'
 
 class App extends React.Component {
   constructor(props) {
@@ -57,7 +58,11 @@ class App extends React.Component {
     return (
       <div>
         <h2>More Places to Stay</h2>
-        <span className='pageTracker'>{this.state.view} / 3 <button onClick={this.prevView}>&lt;</button> <button id='next' onClick={this.nextView}>&gt;</button></span>
+        <span>
+          {this.state.view} / 3
+          <button onClick={this.prevView}>&lt;</button>
+          <button id='next' onClick={this.nextView}>&gt;</button>
+        </span>
         {this.state.places.length === 0 &&
           <div></div>
         }
