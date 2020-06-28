@@ -8,14 +8,14 @@ class RenderView extends React.Component {
 
   render() {
     return (
-      <div className='parent'>
+      <div className={styles.parent}>
         {this.props.places.map((place, index) => {
           return (
-            <div key={index} className='child'>
+            <div key={index} className={styles.child}>
               <img src={place.imageUrl}></img>
-              <span className='favFalse'>&#9829;</span>
+              <span className={styles.favFalse}>&#9829;</span>
               <p>{place.description}</p>
-              <p> <span className='price'>${place.price}</span> / night</p>
+              <p> <span className={styles.price}>${place.price}</span> / night</p>
             </div>
           )
         })}

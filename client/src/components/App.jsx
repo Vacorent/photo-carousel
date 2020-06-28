@@ -61,7 +61,7 @@ class App extends React.Component {
         <span>
           {this.state.view} / 3
           <button onClick={this.prevView}>&lt;</button>
-          <button id='next' onClick={this.nextView}>&gt;</button>
+          <button onClick={this.nextView}>&gt;</button>
         </span>
         {this.state.places.length === 0 &&
           <div></div>

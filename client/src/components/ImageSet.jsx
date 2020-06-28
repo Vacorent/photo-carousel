@@ -8,7 +8,7 @@ class ImageSet extends React.Component {
 
   render() {
     return (
-      <div className='carousel'>
+      <div>
         {this.props.view === 1 &&
           <RenderView places={this.props.places.slice(0, 4)}/>
         }
