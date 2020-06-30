@@ -58,7 +58,7 @@ class App extends React.Component {
     return (
       <div>
         <h2>More Places to Stay</h2>
-        <span>
+        <span className={styles.buttons}>
           {this.state.view} / 3
           <button onClick={this.prevView}>&lt;</button>
           <button onClick={this.nextView}>&gt;</button>

@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './../styles.css';
-console.log(styles);
+import ImageDiv from './ImageDiv.jsx';
+
 class RenderView extends React.Component {
   constructor(props) {
     super(props);
@@ -11,12 +12,7 @@ class RenderView extends React.Component {
       <div className={styles.parent}>
         {this.props.places.map((place, index) => {
           return (
-            <div key={index} className={styles.child}>
-              <img src={place.imageUrl}></img>
-              <span className={styles.favFalse}>&#9829;</span>
-              <p>{place.description}</p>
-              <p> <span className={styles.price}>${place.price}</span> / night</p>
-            </div>
+            <ImageDiv place={place} key={index}/>
           )
         })}
       </div>
